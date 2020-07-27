@@ -19,7 +19,7 @@ export default class details extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{ marginLeft: 10 }}>About:hi my name is lakshya hello</Text>
+        <Text style={{ marginLeft: 10 }}>About:hi my name is </Text>
       </View>
     )
   }
