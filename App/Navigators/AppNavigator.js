@@ -1,6 +1,7 @@
 import { createAppContainer, createStackNavigator } from 'react-navigation'
 
 import ExampleScreen from 'App/Components/Details/Container/detailsContainer.js'
+import Profile from 'App/Components/Profile/Container/ProfileContainer.js'
 import SplashScreen from 'App/Containers/SplashScreen/SplashScreen'
 
 /**
@@ -10,7 +11,24 @@ import SplashScreen from 'App/Containers/SplashScreen/SplashScreen'
  */
 const StackNavigator = createStackNavigator(
   {
-    MainScreen: {
+    ProfileScreen: {
+      screen: Profile,
+      navigationOptions: {
+        title: 'Profile',
+        headerStyle: {
+          backgroundColor: '#FF7F50',
+        },
+        headerTintColor: 'dimgrey',
+        headerTitleStyle: {
+          flexGrow: 1,
+          fontWeight: 'bold',
+          alignSelf: 'center',
+          textAlign: 'center',
+          marginRight: 30,
+        },
+      },
+    },
+    DashBoard: {
       screen: ExampleScreen,
       navigationOptions: {
         title: 'Dashboard',
@@ -29,7 +47,7 @@ const StackNavigator = createStackNavigator(
     },
   },
   {
-    initialRouteName: 'MainScreen',
+    initialRouteName: 'ProfileScreen',
   }
 )
 

@@ -5,13 +5,14 @@ import {
   View,
   ScrollView,
   StyleSheet,
-  Button,
   Text,
   TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native'
 import Discover from './discover'
 // import Description from './description'
 import Image from './Image'
+import Profile from 'App/GlobalComponents/Button.js'
 
 export default class details extends Component {
   constructor() {
@@ -19,12 +20,30 @@ export default class details extends Component {
     this.state = {}
   }
 
+  goToProfile = () => {
+    this.props.navigation.navigate('ProfileScreen')
+  }
+
   render() {
+    console.log(this.props)
     return (
       <View style={styles.container}>
         <Image />
         <View style={{ width: 300, alignSelf: 'center', marginTop: 10 }}>
-          <Button title="Edit Profile" color="#FF7F50" />
+          <TouchableOpacity
+            hitSlop={{
+              top: 50,
+              bottom: 50,
+              left: 25,
+              right: 25,
+            }}
+            style={styles.profileButton}
+            onPress={() => this.goToProfile()}
+          >
+            <View>
+              <Text style={styles.title}>Profile</Text>
+            </View>
+          </TouchableOpacity>
         </View>
         <Discover />
       </View>
@@ -41,6 +60,18 @@ const styles = StyleSheet.create({
     height: 2,
     backgroundColor: 'rgba(0,0,0,0.5)',
     width: '100%',
+  },
+  profileButton: {
+    alignSelf: 'center',
+    backgroundColor: '#FF7F50',
+    width: 300,
+    height: 40,
+  },
+  title: {
+    alignSelf: 'center',
+    padding: 5,
+    fontSize: 18,
+    color: 'dimgrey',
   },
 
   text: {
