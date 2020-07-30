@@ -12,6 +12,7 @@ import RegisterScreen from 'App/Components/Register/Container/RegisterContainer.
  */
 
 console.disableYellowBox = true
+
 const StackNavigator = createStackNavigator(
   {
     MainScreen: {

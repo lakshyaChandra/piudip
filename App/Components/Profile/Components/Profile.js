@@ -98,7 +98,7 @@ export default class Login extends React.Component {
             label={'PassWord'}
             containerStyle={{ width: 350 }}
             labelStyle={styles.labelStyles}
-            leftIcon={<Icon name="call" type="MaterialIcons" size={20} />}
+            leftIcon={<Icon name="lock" type="MaterialIcons" size={20} />}
             value={PassWord}
             autoCapitalize="none"
             autoCorrect={false}
@@ -159,5 +159,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     position: 'absolute',
     marginTop: 20,
+  },
+  labelStyles: {
+    marginLeft: 15,
+    padding: 10,
   },
 })

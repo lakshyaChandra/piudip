@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { View, ScrollView } from 'react-native'
+import { View, ScrollView, SafeAreaView } from 'react-native'
 import DetailsPage from 'App/Components/Details/Components/details.js'
 
 class Details extends Component {
@@ -11,11 +11,9 @@ class Details extends Component {
 
   render() {
     return (
-      <ScrollView>
-        <View style={{ flex: 1 }}>
-          <DetailsPage {...this.props} />
-        </View>
-      </ScrollView>
+      <View style={{ flex: 1 }}>
+        <DetailsPage {...this.props} />
+      </View>
     )
   }
 }
@@ -26,7 +24,4 @@ const mapDispatchToProps = (dispatch) => {
   return {}
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Details)
+export default connect(mapStateToProps, mapDispatchToProps)(Details)

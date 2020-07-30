@@ -13,6 +13,7 @@ import Discover from './discover'
 // import Description from './description'
 import Image from './Image'
 import Profile from 'App/GlobalComponents/Button.js'
+import Footer from './Footer'
 
 export default class details extends Component {
   constructor() {
@@ -46,6 +47,7 @@ export default class details extends Component {
           </TouchableOpacity>
         </View>
         <Discover />
+        <Footer {...this.props} />
       </View>
     )
   }
@@ -53,7 +55,7 @@ export default class details extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 8,
   },
 
   separator: {
