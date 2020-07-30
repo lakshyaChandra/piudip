@@ -19,7 +19,7 @@ const StackNavigator = createStackNavigator(
       navigationOptions: {
         title: 'Profile',
         headerStyle: {
-          backgroundColor: '#FF7F50',
+          backgroundColor: '#ff9e67',
         },
         headerTintColor: 'dimgrey',
         headerTitleStyle: {
@@ -36,7 +36,7 @@ const StackNavigator = createStackNavigator(
       navigationOptions: {
         title: 'Dashboard',
         headerStyle: {
-          backgroundColor: '#FF7F50',
+          backgroundColor: '#ff9e67',
         },
         headerTintColor: 'dimgrey',
         headerTitleStyle: {
@@ -53,7 +53,7 @@ const StackNavigator = createStackNavigator(
       navigationOptions: {
         title: 'Register',
         headerStyle: {
-          backgroundColor: '#FF7F50',
+          backgroundColor: '#ff9e67',
         },
         headerTintColor: 'dimgrey',
         headerTitleStyle: {

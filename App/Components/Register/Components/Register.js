@@ -129,6 +129,7 @@ export default class Login extends React.Component {
         <Input
           label={'Last Name'}
           labelStyle={styles.labelStyles}
+          leftIcon={<Icon name="user-o" type="font-awesome" size={20} />}
           value={lastName}
           autoCapitalize="none"
           autoCorrect={false}
@@ -164,6 +165,7 @@ export default class Login extends React.Component {
         />
         <Input
           label={'Mobile'}
+          maxLength={10}
           labelStyle={styles.labelStyles}
           leftIcon={<Icon name="call" type="MaterialIcons" size={20} />}
           value={phone}
@@ -185,7 +187,7 @@ export default class Login extends React.Component {
             buttonType="outline"
             onPress={this.handleSubmit}
             title="LOGIN"
-            buttonColor="#039BE5"
+            buttonColor="#ff9e67"
           />
         </View>
       </SafeAreaView>
