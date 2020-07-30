@@ -3,15 +3,18 @@ import { createAppContainer, createStackNavigator } from 'react-navigation'
 import ExampleScreen from 'App/Components/Details/Container/detailsContainer.js'
 import Profile from 'App/Components/Profile/Container/ProfileContainer.js'
 import SplashScreen from 'App/Containers/SplashScreen/SplashScreen'
+import RegisterScreen from 'App/Components/Register/Container/RegisterContainer.js'
 
 /**
  * The root screen contains the application's navigation.
  *
  * @see https://reactnavigation.org/docs/en/hello-react-navigation.html#creating-a-stack-navigator
  */
+
+console.disableYellowBox = true
 const StackNavigator = createStackNavigator(
   {
-    ProfileScreen: {
+    MainScreen: {
       screen: Profile,
       navigationOptions: {
         title: 'Profile',
@@ -45,9 +48,26 @@ const StackNavigator = createStackNavigator(
         },
       },
     },
+    Register: {
+      screen: RegisterScreen,
+      navigationOptions: {
+        title: 'Register',
+        headerStyle: {
+          backgroundColor: '#FF7F50',
+        },
+        headerTintColor: 'dimgrey',
+        headerTitleStyle: {
+          flexGrow: 1,
+          fontWeight: 'bold',
+          alignSelf: 'center',
+          textAlign: 'center',
+          marginRight: 30,
+        },
+      },
+    },
   },
   {
-    initialRouteName: 'ProfileScreen',
+    initialRouteName: 'MainScreen',
   }
 )
 

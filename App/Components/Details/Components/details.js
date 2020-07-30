@@ -21,7 +21,7 @@ export default class details extends Component {
   }
 
   goToProfile = () => {
-    this.props.navigation.navigate('ProfileScreen')
+    this.props.navigation.navigate('MainScreen')
   }
 
   render() {
